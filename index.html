@@ -26,17 +26,7 @@
     <header class="sticky top-0 z-40 bg-slate-950/90 backdrop-blur-md border-b border-pink-950/50 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <div class="flex items-center gap-3 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-                <!-- LOGO INLINE SVG (SELALU MUNCUL 100% DI VERCEL & LOKAL) -->
-                <div class="w-10 h-10 rounded-xl bg-slate-900 border-2 border-pink-500 shadow-md shadow-pink-500/20 flex items-center justify-center overflow-hidden p-1">
-                    <svg viewBox="0 0 500 500" class="w-full h-full">
-                        <path d="M250 80 L390 160 L250 240 L110 160 Z" fill="#ec4899" />
-                        <rect x="370" y="160" width="10" height="70" fill="#f472b6" />
-                        <circle cx="375" cy="240" r="9" fill="#f472b6" />
-                        <circle cx="250" cy="270" r="32" fill="#ec4899" />
-                        <path d="M150 200 Q220 310 230 460 L185 460 Q175 320 150 200 Z" fill="#ec4899" />
-                        <path d="M350 200 Q280 310 270 460 L315 460 Q325 320 350 200 Z" fill="#be185d" />
-                    </svg>
-                </div>
+                <img src="Logo Your Graduation.png" alt="Logo Your Graduation" class="w-10 h-10 rounded-xl object-cover border-2 border-pink-500 shadow-md shadow-pink-500/20">
                 <div>
                     <span class="text-xl font-extrabold text-white tracking-tight block leading-tight">Your <span class="text-pink-400">Graduation</span></span>
                 </div>
@@ -603,6 +593,7 @@
             { id: 'v6', name: 'Crafty Souvenir Wisuda', category: 'Pengrajin Souvenir Custom', role: 'Souvenir Specialist', desc: 'Buket bunga, selempang bordir, & papan nama wisuda kustom.' }
         ];
 
+        // DATABASE PENDAFTARAN MITRA VENDOR BARU (DENGAN CONTOH PERMOHONAN MASUK)
         let vendorRegistrationsDatabase = [
             { id: 'VR-101', name: 'Studio Fotografi Solo', category: 'Photografer & Dokumentasi', branch: 'Solo', portfolio: 'https://instagram.com/studiosolo', desc: 'Spesialis dokumentasi wisuda outdoor dan studio sejak 2021.', status: 'Menunggu Review', date: '2026-11-07' },
             { id: 'VR-102', name: 'Hijab Art & Beauty', category: 'Hairdo / Hijabdo / Nails', branch: 'Semarang', portfolio: 'https://instagram.com/hijabart', desc: 'Spesialis hijabdo wisuda modern kekinian.', status: 'Menunggu Review', date: '2026-11-08' }
@@ -834,6 +825,7 @@
             document.getElementById('join-vendor-modal').classList.add('hidden');
         }
 
+        // AKSI CUSTOMER MENGAJUKAN BERGABUNG VENDOR
         function submitVendorRegistration() {
             const name = document.getElementById('v-name').value;
             const category = document.getElementById('v-category').value;
@@ -860,6 +852,7 @@
             alert(`Terima kasih! Berkas pendaftaran mitra vendor (${name}) berhasil dikirim dan kini sedang dalam peninjauan oleh Owner.`);
         }
 
+        // AKSI OWNER / ADMIN MENYELEKSI & MENERIMA / MENOLAK VENDOR
         function processVendorApproval(regId, isApproved) {
             const reg = vendorRegistrationsDatabase.find(r => r.id === regId);
             if (!reg) return;

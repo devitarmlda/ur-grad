@@ -27,9 +27,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <div class="flex items-center gap-3 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
                 <!-- LOGO HEADER DENGAN ENCODING URL SPASI & FALLBACK -->
-                <img src="Logo%20Your%20Graduation.png" 
-                     onerror="this.onerror=null; this.src='Logo%20Your%20Graduation_2.png';" 
-                     alt="Logo Your Graduation" 
+                <img src="./picture/Logo%20Your%20Graduation.png"
+                     alt="Logo Your Graduation"
                      class="w-10 h-10 rounded-xl object-cover border-2 border-pink-500 shadow-md shadow-pink-500/20">
                 <div>
                     <span class="text-xl font-extrabold text-white tracking-tight block leading-tight">Your <span class="text-pink-400">Graduation</span></span>
@@ -604,14 +603,26 @@
 
         let vendorPortfolios = {
             'Glamour MUA': [
-                { title: 'Makeup Soft Glam Wisuda', img: 'secret pict.png', desc: 'Riasan halus tahan seharian tanpa cakey.' },
-                { title: 'Bold Glam Graduation Makeup', img: 'secret pict.png', desc: 'Riasan tegas elegan untuk sesi foto wisuda.' }
+                {
+                    title: 'Makeup Soft Glam Wisuda',
+                    img: './picture/secret%20pict.png',
+                    desc: 'Riasan halus tahan seharian tanpa cakey.'
+                },
+                {
+                    title: 'Bold Glam Graduation Makeup',
+                    img: './picture/foto1.jpg',
+                    desc: 'Riasan tegas elegan untuk sesi foto wisuda.'
+                }
             ],
+        
             'Focus Lens & Motion': [
-                { title: 'Sesi Foto Outdoor', img: 'secret pict.png', desc: 'Foto dokumentasi outdoor penuh kehangatan.' }
+                {
+                    title: 'Sesi Foto Outdoor',
+                    img: './picture/foto2.jpg',
+                    desc: 'Foto dokumentasi outdoor penuh kehangatan.'
+                }
             ]
         };
-
         let customerReviewsDatabase = [
             { id: 1, customer: 'Anisa Rahma', type: 'vendor', vendorName: 'Glamour MUA', rating: 5, comment: 'Hasil makeup sangat rapi dan tahan seharian pas wisuda!', date: '2026-11-01' },
             { id: 2, customer: 'Budi Santoso', type: 'vendor', vendorName: 'Focus Lens & Motion', rating: 5, comment: 'Pengerjaan foto wisuda cepat dan softfile jernih.', date: '2026-11-03' },
@@ -779,7 +790,10 @@
             selectedVendorForModal = vendor;
             const autoRating = calculateVendorRating(vendor.name);
             const portfolios = vendorPortfolios[vendor.name] || [
-                { title: 'Dokumentasi Pengerjaan', img: 'secret pict.png' }
+                {
+                    title: 'Dokumentasi Pengerjaan',
+                    img: './picture/secret%20pict.png'
+                }
             ];
 
             document.getElementById('vp-modal-avatar').innerText = vendor.name.charAt(0);
@@ -872,7 +886,11 @@
                 });
 
                 vendorPortfolios[reg.name] = [
-                    { title: `Portofolio Resmi ${reg.name}`, img: 'secret pict.png', desc: `Karya terverifikasi oleh Your Graduation.` }
+                    {
+                        title: `Portofolio Resmi ${reg.name}`,
+                        img: './picture/secret%20pict.png',
+                        desc: `Karya terverifikasi oleh Your Graduation.`
+                    }
                 ];
 
                 alert(`Pendaftaran vendor ${reg.name} berhasil DISETUJUI (ACC)! Vendor baru kini aktif dan tampil di katalog utama.`);

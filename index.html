@@ -26,10 +26,14 @@
     <header class="sticky top-0 z-40 bg-slate-950/90 backdrop-blur-md border-b border-pink-950/50 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <div class="flex items-center gap-3 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <!-- LOGO HEADER DENGAN ENCODING URL SPASI & FALLBACK -->
                 <img src="Logo%20Your%20Graduation.png" 
                      onerror="this.onerror=null; this.src='Logo%20Your%20Graduation_2.png';" 
                      alt="Logo Your Graduation" 
-                     class="h-12 w-auto object-contain drop-shadow-[0_0_8px_rgba(236,72,153,0.5)]">
+                     class="w-10 h-10 rounded-xl object-cover border-2 border-pink-500 shadow-md shadow-pink-500/20">
+                <div>
+                    <span class="text-xl font-extrabold text-white tracking-tight block leading-tight">Your <span class="text-pink-400">Graduation</span></span>
+                </div>
             </div>
 
             <!-- MENU NAVIGASI TENGAH DINAMIS -->
@@ -42,13 +46,11 @@
 
             <!-- ACTION BUTTONS -->
             <div class="flex items-center gap-3">
-                <!-- FITUR BERGABUNG VENDOR (HANYA UNTUK LOGIN CUSTOMER) -->
                 <button id="btn-join-vendor" onclick="openJoinVendorModal()" class="hidden sm:flex items-center gap-1.5 border border-pink-500/40 hover:bg-pink-500/10 text-pink-400 font-bold px-3 py-2 rounded-xl text-xs transition-all">
                     <i class="fa-solid fa-handshake"></i>
                     <span>Bergabung Jadi Vendor</span>
                 </button>
 
-                <!-- FITUR KERANJANG (HANYA UNTUK GUEST / CUSTOMER) -->
                 <button id="btn-cart-nav" onclick="handleCartClick()" class="relative bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-200 font-semibold px-3 py-2 rounded-xl transition-all flex items-center gap-2 text-xs">
                     <i class="fa-solid fa-bag-shopping text-pink-500"></i>
                     <span class="hidden sm:inline">Keranjang</span>
@@ -62,6 +64,7 @@
         </div>
     </header>
 
+    
     <!-- DASHBOARD ROLE BANNER -->
     <div id="role-dashboard-banner" class="hidden bg-slate-950 text-white py-4 px-6 border-b border-pink-900/50">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">

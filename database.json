@@ -1,0 +1,53 @@
+{
+    "users": [
+        {
+            "username": "owner",
+            "password": "123",
+            "role": "owner",
+            "name": "Owner Your Graduation"
+        },
+        {
+            "username": "admin",
+            "password": "123",
+            "role": "admin",
+            "name": "Admin Operational"
+        },
+        {
+            "username": "vendor",
+            "password": "123",
+            "role": "vendor",
+            "name": "Mitra Vendor MUA & Studio"
+        },
+        {
+            "username": "customer1",
+            "password": "123",
+            "role": "customer",
+            "name": "Upin Ipin"
+        },
+        {
+            "username": "ninuninu",
+            "password": "tyas1234",
+            "role": "customer",
+            "name": "Nirma"
+        }
+    ],
+    "orders": [
+        {
+            "id": "#YG-8821",
+            "username": "customer1",
+            "name": "Upin Ipin",
+            "prodi": "Sastra Inggris",
+            "university": "Universitas Sebelas Maret",
+            "date": "2026-11-06",
+            "time": "08:00",
+            "location": "Gedung Serbaguna Kampus",
+            "branch": "Pekalongan",
+            "status": "Lunas - Slot Terkunci",
+            "total": 749000,
+            "items": [
+                "Paket Ultimate Wisuda"
+            ]
+        }
+    ],
+    "chats": []
+}

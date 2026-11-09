@@ -27,7 +27,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <div class="flex items-center gap-3 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
                 <!-- LOGO HEADER DENGAN ENCODING URL SPASI & FALLBACK -->
-                <img src="./picture/Logo%20Your%20Graduation.png"
+                <img src="/picture/Logo%20Your%20Graduation.png"
                      alt="Logo Your Graduation"
                      class="w-10 h-10 rounded-xl object-cover border-2 border-pink-500 shadow-md shadow-pink-500/20">
                 <div>
@@ -805,7 +805,7 @@
 
             document.getElementById('vp-modal-gallery').innerHTML = portfolios.map(p => `
                 <div class="bg-slate-900 border border-slate-800 p-2.5 rounded-2xl space-y-2">
-                    <img src="${p.img}" class="w-full h-36 object-cover rounded-xl border border-slate-800">
+                    <img src="${p.img}" alt="${p.title || 'Foto portofolio vendor'}" onerror="this.onerror=null; this.src='/picture/secret%20pict.png';" class="w-full h-36 object-cover rounded-xl border border-slate-800">
                     <div>
                         <h5 class="font-bold text-white text-xs">${p.title}</h5>
                         <p class="text-[10px] text-slate-400 mt-0.5">${p.desc}</p>
@@ -1178,7 +1178,7 @@
                             <div class="grid sm:grid-cols-3 gap-3">
                                 ${pfList.length === 0 ? '<p class="text-slate-500 text-xs">Belum ada hasil pekerjaan yang ditambahkan.</p>' : pfList.map(pf => `
                                     <div class="bg-slate-900 p-2.5 rounded-xl border border-slate-800 space-y-1.5">
-                                        <img src="${pf.img}" class="w-full h-24 object-cover rounded-lg">
+                                        <img src="${pf.img}" alt="${pf.title || 'Foto portofolio vendor'}" onerror="this.onerror=null; this.src='/picture/secret%20pict.png';" class="w-full h-24 object-cover rounded-lg">
                                         <h5 class="font-bold text-white text-xs">${pf.title}</h5>
                                         <p class="text-[10px] text-slate-400 truncate">${pf.desc}</p>
                                     </div>

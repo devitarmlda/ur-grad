@@ -27,9 +27,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <div class="flex items-center gap-3 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
                 <!-- LOGO HEADER DENGAN ENCODING URL SPASI & FALLBACK -->
-                <img src="picture/Logo Your Graduation.png"
+                <img src="/picture/Logo%20Your%20Graduation.png"
                      alt="Logo Your Graduation"
-                     class="w-10 h-10 rounded-xl object-cover border-2 border-pink-500 shadow-md shadow-pink-500/20">
+                     class="w-10 h-10 rounded-xl object-cover border-2 border-pink-500 shadow-md shadow-pink-500/20"
+                     onerror="console.error('Logo gagal dimuat:', this.src)">
                 <div>
                     <span class="text-xl font-extrabold text-white tracking-tight block leading-tight">Your <span class="text-pink-400">Graduation</span></span>
                 </div>

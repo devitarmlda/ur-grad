@@ -57,7 +57,12 @@ def save_data(data):
 # Serving Frontend Utama
 @app.route('/')
 def index():
-    return send_from_directory('.', 'index.html')
+    return send_from_directory(app.root_path, 'index.html')
+
+# Melayani gambar secara langsung agar tetap dapat diakses setelah deploy ke Vercel.
+@app.route('/picture/<path:filename>')
+def serve_picture(filename):
+    return send_from_directory(os.path.join(app.root_path, 'picture'), filename)
 
 # API GET & POST ORDERS
 @app.route('/api/orders', methods=['GET', 'POST'])
